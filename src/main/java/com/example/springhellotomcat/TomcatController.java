@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TomcatController {
 
+    @GetMapping("/")
+    public String index() {
+        return "Hello World";
+    }
+
     @GetMapping("/hello")
     public Collection<String> sayHello() {
         return IntStream.range(0, 10)
